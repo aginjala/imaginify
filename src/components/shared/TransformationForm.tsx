@@ -184,7 +184,7 @@ const TransformationForm = ({
           [fieldName === "prompt" ? "prompt" : "to"]: value,
         },
       }));
-    }, 1000);
+    }, 1000)();
     return onChangeField(value);
   };
 
@@ -224,7 +224,8 @@ const TransformationForm = ({
             formLabel="Aspect Ratio"
             className="w-full"
             render={({ field }) => (
-              <Select
+              <Select 
+                value={field.value} 
                 onValueChange={(value: string) =>
                   onSelectFieldHandler(value, field.onChange)
                 }

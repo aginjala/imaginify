@@ -32,7 +32,7 @@ export async function addImage({ image, userId, path }: AddImageParams) {
     });
 
     revalidatePath(path);
-    return JSON.parse(JSON.stringify(image));
+    return JSON.parse(JSON.stringify(newImage));
   } catch (error) {
     handleError(error);
   }
@@ -56,7 +56,7 @@ export async function updateImage({ image, userId, path }: UpdateImageParams) {
 
     revalidatePath(path);
 
-    return JSON.parse(JSON.stringify(updateImage));
+    return JSON.parse(JSON.stringify(updatedImage));
   } catch (error) {
     handleError(error);
   }
@@ -91,7 +91,7 @@ export async function getImageById(imageId: string) {
 }
 
 // GET IMAGES
-export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
+export async function getAllImages({ limit = 6, page = 1, searchQuery = '' }: {
   limit?: number;
   page: number;
   searchQuery?: string;
