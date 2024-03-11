@@ -63,7 +63,7 @@ const MediaUploader = ({
     >
       {({ open }) => (
         <div className="flex flex-col gap-4">
-          <h3 className="h3-bold text-dark-600">Original</h3>
+          <h3 className="h3-bold text-gray-700">Original</h3>
           {publicId ? (
             <div className="cursor-pointer overflow-hidden rounded-[10px]">
               <CldImage
