@@ -17,7 +17,6 @@ const MoblieNav = () => {
   const pathName = usePathname();
   return (
     <header className="header">
-<<<<<<< HEAD
       {/* <Link href="/" className="flex items-center gap-2 md:py-2">
         <Image
           src="/assets/images/logo-text.svg"
@@ -26,8 +25,6 @@ const MoblieNav = () => {
           height={28}
         />
       </Link> */}
-=======
->>>>>>> f7174d9e87fb31dd77147749c370d297ef1c5b59
       <nav className="flex flex-between gap-2">
         <SignedIn>
           <UserButton afterSignOutUrl="/" />
@@ -43,15 +40,12 @@ const MoblieNav = () => {
             </SheetTrigger>
             <SheetContent className="sheet-content sm:w-64">
               <>
-<<<<<<< HEAD
                 {/* <Image
                   src="/assets/images/logo-text.svg"
                   alt="moblie nav logo"
                   width={152}
                   height={23}
                 /> */}
-=======
->>>>>>> f7174d9e87fb31dd77147749c370d297ef1c5b59
                 <ul className="header-nav_elements">
                   {navLinks.map((link) => {
                     const isActive = pathName === link.route;
